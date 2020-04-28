@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import SearchPanel from "components/SearchPanel";
 import MainTemplate from "templates/MainTemplate";
+import Navigation from "components/Navigation";
 
 class Root extends Component {
   state = {
+    input: "",
     searched: false,
   };
 
@@ -18,6 +20,7 @@ class Root extends Component {
   render() {
     return (
       <MainTemplate>
+        <Navigation />
         <SearchPanel
           handleInputSubmit={this.handleInput}
           searched={this.state.searched}

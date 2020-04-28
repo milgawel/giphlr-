@@ -6,6 +6,7 @@ import wallpaper from "assets/giphy_main.jpg";
 const Wrapper = styled.div`
   width: 100vw;
   min-height: 100vh;
+
   &:after {
     content: "";
     background: url(${wallpaper});
