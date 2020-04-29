@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/giphlr/static/css/main.8673f4bf.chunk.css",
+    "main.js": "/giphlr/static/js/main.b1089938.chunk.js",
+    "main.js.map": "/giphlr/static/js/main.b1089938.chunk.js.map",
+    "runtime-main.js": "/giphlr/static/js/runtime-main.667d6486.js",
+    "runtime-main.js.map": "/giphlr/static/js/runtime-main.667d6486.js.map",
+    "static/js/2.b82468df.chunk.js": "/giphlr/static/js/2.b82468df.chunk.js",
+    "static/js/2.b82468df.chunk.js.map": "/giphlr/static/js/2.b82468df.chunk.js.map",
+    "index.html": "/giphlr/index.html",
+    "precache-manifest.04776e30189cb32d770ff47c2a77c011.js": "/giphlr/precache-manifest.04776e30189cb32d770ff47c2a77c011.js",
+    "service-worker.js": "/giphlr/service-worker.js",
+    "static/css/main.8673f4bf.chunk.css.map": "/giphlr/static/css/main.8673f4bf.chunk.css.map",
+    "static/js/2.b82468df.chunk.js.LICENSE.txt": "/giphlr/static/js/2.b82468df.chunk.js.LICENSE.txt",
+    "static/media/giphy_main.jpg": "/giphlr/static/media/giphy_main.1b99dd96.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.667d6486.js",
+    "static/js/2.b82468df.chunk.js",
+    "static/css/main.8673f4bf.chunk.css",
+    "static/js/main.b1089938.chunk.js"
+  ]
+}
