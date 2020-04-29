@@ -8,6 +8,7 @@ const NavWrapper = styled.div`
   position: fixed;
   background-color: rgba(0, 0, 0, 0.6);
   padding-left: 20px;
+  z-index: 999;
 `;
 
 const StyledImg = styled.img`
@@ -17,10 +18,9 @@ const StyledImg = styled.img`
 
 const Navigation = () => (
   <NavWrapper>
-    <a href="#">
+    <a href="www.google.pl">
       <StyledImg src={logo} alt="" />
     </a>
-    hello
   </NavWrapper>
 );
 

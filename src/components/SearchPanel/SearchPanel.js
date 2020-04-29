@@ -15,15 +15,21 @@ const PanelWrapper = styled.div`
   animation-delay: 0.4s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
+  z-index: 999;
   @keyframes animateMovement {
     0% {
       top: 50%;
       left: 50%;
     }
-
     100% {
       top: 50px;
       left: 340px;
+      position: absolute;
+    }
+    100% {
+      top: 50px;
+      left: 340px;
+      position: fixed;
     }
   }
 `;
@@ -56,7 +62,6 @@ class SearchPanel extends Component {
     this.setState({
       input: newInput,
     });
-    console.log(newInput);
   };
 
   render() {
@@ -65,12 +70,12 @@ class SearchPanel extends Component {
       <PanelWrapper active={searched}>
         <form
           onSubmit={(e) => {
-            handleInputSubmit(this.state.input, e);
+            handleInputSubmit(e, this.state.input);
             this.setState({ input: "" });
           }}
           onKeyPress={(e) => {
             if (e.key === "Enter") {
-              handleInputSubmit(this.state.input, e);
+              handleInputSubmit(e, this.state.input);
               this.setState({ input: "" });
             }
           }}
