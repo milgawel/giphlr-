@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "29a16c5e3ac48e2b1677442653441870",
+    "revision": "09e62ae09d58f09ed624337b7900c398",
     "url": "/giphlr/index.html"
   },
   {
-    "revision": "ae52487b1a2ea56c65f6",
+    "revision": "89bf4d4a120089d32922",
     "url": "/giphlr/static/css/main.8afee898.chunk.css"
   },
   {
-    "revision": "d4495ff4308853bc7105",
-    "url": "/giphlr/static/js/2.b82468df.chunk.js"
+    "revision": "cd80b9da9b3a0609c3bf",
+    "url": "/giphlr/static/js/2.9a0df864.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/giphlr/static/js/2.b82468df.chunk.js.LICENSE.txt"
+    "url": "/giphlr/static/js/2.9a0df864.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ae52487b1a2ea56c65f6",
-    "url": "/giphlr/static/js/main.3705c68d.chunk.js"
+    "revision": "89bf4d4a120089d32922",
+    "url": "/giphlr/static/js/main.4e8488d0.chunk.js"
   },
   {
     "revision": "7f32f905cdf0c38cdf16",
