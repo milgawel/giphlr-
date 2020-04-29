@@ -11,8 +11,8 @@ const PanelWrapper = styled.div`
   display: flex;
   transition: all 0.4s ease;
   flex-direction: column;
-  animation: ${({ active }) => (active ? "animateMovement" : "null")} 1s;
-  animation-delay: 0.4s;
+  animation: ${({ active }) => (active ? "animateMovement" : "null")} 0.7s;
+  animation-delay: 0.3s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   z-index: 999;

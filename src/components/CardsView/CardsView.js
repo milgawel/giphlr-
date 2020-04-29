@@ -7,6 +7,15 @@ const Wrapper = styled.div`
   width: 100%;
   padding: 100px;
   animation: display 1.5s;
+  @media (max-width: 1024px) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @media (max-width: 420px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
   @keyframes display {
     0% {
@@ -29,9 +38,10 @@ const CardsView = ({ children }) => (
           id={item.id}
           key={item.id}
           title={item.title}
-          // imgUrl={item.images.original.webp}
-          imgUrl={item.images.preview_webp.url}
-          height={item.images.original.height}
+          // imgUrl={item.images.fixed_width_small.webp}
+          imgUrl={item.images.original.webp}
+          // imgUrl={item.images.preview_webp.url}
+          // itemHeight={item.images.original.height}
         />
       ))}
     </MasonryLayout>

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import LazyLoad from "react-lazyload";
 
 const StyledCard = styled.figure`
   margin-bottom: 30px;
@@ -67,26 +68,28 @@ class Card extends React.Component {
   }
 
   render() {
-    const { id, title, imgUrl, height } = this.props;
+    const { id, title, imgUrl, itemHeight } = this.props;
 
     return (
-      <StyledCard
-        id={id}
-        onMouseEnter={this.handleMouseHover}
-        onMouseLeave={this.handleMouseHover}
-      >
-        {<StyledHeader active={this.state.isHovering}>{title}</StyledHeader>}
+      <LazyLoad once height={200} offset={200}>
+        <StyledCard
+          id={id}
+          onMouseEnter={this.handleMouseHover}
+          onMouseLeave={this.handleMouseHover}
+        >
+          {<StyledHeader active={this.state.isHovering}>{title}</StyledHeader>}
 
-        <StyledLink href={imgUrl} target="_blank">
-          {this.state.ready ? null : <Placeholder height={height} />}
-          <StyledImg
-            src={imgUrl}
-            alt={title}
-            onLoad={() => this.setState({ ready: true })}
-            display={this.state.ready}
-          />
-        </StyledLink>
-      </StyledCard>
+          <StyledLink href={imgUrl} target="_blank">
+            {this.state.ready ? null : <Placeholder itemHeight={itemHeight} />}
+            <StyledImg
+              src={imgUrl}
+              alt={title}
+              onLoad={() => this.setState({ ready: true })}
+              display={this.state.ready}
+            />
+          </StyledLink>
+        </StyledCard>
+      </LazyLoad>
     );
   }
 }
