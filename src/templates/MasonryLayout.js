@@ -3,7 +3,9 @@ import Masonry from "react-masonry-css";
 import "./MasonryCss.css";
 
 const breakpointColumnsObj = {
-  default: 4,
+  default: 6,
+  1800: 5,
+  1400: 4,
   1100: 3,
   600: 2,
   300: 1,

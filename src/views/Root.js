@@ -28,10 +28,6 @@ class Root extends Component {
       .catch((err) => console.log(err));
   };
 
-  componentDidUpdate() {
-    console.log(`[component did update] ${this.state.input}`);
-  }
-
   render() {
     return (
       <MainTemplate>

@@ -23,12 +23,12 @@ const PanelWrapper = styled.div`
     }
     100% {
       top: 50px;
-      left: 340px;
+      left: 240px;
       position: absolute;
     }
     100% {
       top: 50px;
-      left: 340px;
+      left: 185px;
       position: fixed;
     }
   }
@@ -36,7 +36,7 @@ const PanelWrapper = styled.div`
 
 const StyledButton = styled.input`
   height: 40px;
-  width: 220px;
+  width: 240px;
   border-radius: 5px;
   border: none;
   background-color: #d562f5;
