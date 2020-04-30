@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/giphlr/static/css/main.8afee898.chunk.css",
-    "main.js": "/giphlr/static/js/main.4e8488d0.chunk.js",
-    "main.js.map": "/giphlr/static/js/main.4e8488d0.chunk.js.map",
+    "main.js": "/giphlr/static/js/main.2496cb18.chunk.js",
+    "main.js.map": "/giphlr/static/js/main.2496cb18.chunk.js.map",
     "runtime-main.js": "/giphlr/static/js/runtime-main.667d6486.js",
     "runtime-main.js.map": "/giphlr/static/js/runtime-main.667d6486.js.map",
-    "static/js/2.9a0df864.chunk.js": "/giphlr/static/js/2.9a0df864.chunk.js",
-    "static/js/2.9a0df864.chunk.js.map": "/giphlr/static/js/2.9a0df864.chunk.js.map",
+    "static/js/2.5bfb5b0b.chunk.js": "/giphlr/static/js/2.5bfb5b0b.chunk.js",
+    "static/js/2.5bfb5b0b.chunk.js.map": "/giphlr/static/js/2.5bfb5b0b.chunk.js.map",
     "index.html": "/giphlr/index.html",
-    "precache-manifest.3bb5c8b5cfbb149d549398b1d244890c.js": "/giphlr/precache-manifest.3bb5c8b5cfbb149d549398b1d244890c.js",
+    "precache-manifest.69c85bd583d5d9238a589128bdee1dae.js": "/giphlr/precache-manifest.69c85bd583d5d9238a589128bdee1dae.js",
     "service-worker.js": "/giphlr/service-worker.js",
     "static/css/main.8afee898.chunk.css.map": "/giphlr/static/css/main.8afee898.chunk.css.map",
-    "static/js/2.9a0df864.chunk.js.LICENSE.txt": "/giphlr/static/js/2.9a0df864.chunk.js.LICENSE.txt",
+    "static/js/2.5bfb5b0b.chunk.js.LICENSE.txt": "/giphlr/static/js/2.5bfb5b0b.chunk.js.LICENSE.txt",
     "static/media/giphy_main.jpg": "/giphlr/static/media/giphy_main.1b99dd96.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.667d6486.js",
-    "static/js/2.9a0df864.chunk.js",
+    "static/js/2.5bfb5b0b.chunk.js",
     "static/css/main.8afee898.chunk.css",
-    "static/js/main.4e8488d0.chunk.js"
+    "static/js/main.2496cb18.chunk.js"
   ]
 }
