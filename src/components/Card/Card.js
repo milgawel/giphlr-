@@ -71,7 +71,7 @@ class Card extends React.Component {
     const { id, title, imgUrl, itemHeight } = this.props;
 
     return (
-      <LazyLoad once height={200} offset={200}>
+      <LazyLoad once height={200} offset={400}>
         <StyledCard
           id={id}
           onMouseEnter={this.handleMouseHover}

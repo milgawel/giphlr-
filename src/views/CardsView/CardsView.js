@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Card from "components/Card";
-import MasonryLayout from "templates/MasonryLayout";
+import MasonryTemplate from "templates/MasonryTemplate";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -30,7 +30,7 @@ const Wrapper = styled.div`
 
 const CardsView = ({ children }) => (
   <Wrapper>
-    <MasonryLayout>
+    <MasonryTemplate>
       {children.map((item) => (
         <Card
           id={item.id}
@@ -42,7 +42,7 @@ const CardsView = ({ children }) => (
           // imgUrl={item.images.preview_webp.url}
         />
       ))}
-    </MasonryLayout>
+    </MasonryTemplate>
   </Wrapper>
 );
 

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Input from "components/Input";
 
 const PanelWrapper = styled.div`
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -21,11 +21,7 @@ const PanelWrapper = styled.div`
       top: 50%;
       left: 50%;
     }
-    100% {
-      top: 50px;
-      left: 240px;
-      position: absolute;
-    }
+
     100% {
       top: 50px;
       left: 185px;

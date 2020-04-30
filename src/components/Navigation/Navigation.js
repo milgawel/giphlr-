@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import logo from "assets/giphy_logoIcon.png";
+import SearchPanel from "components/SearchPanel";
 
 const NavWrapper = styled.div`
   width: 100vw;
@@ -16,11 +17,12 @@ const StyledImg = styled.img`
   height: 40px;
 `;
 
-const Navigation = () => (
+const Navigation = ({ handleInputSubmit, searched }) => (
   <NavWrapper>
     <a href="#top">
       <StyledImg src={logo} alt="" />
     </a>
+    <SearchPanel handleInputSubmit={handleInputSubmit} searched={searched} />
   </NavWrapper>
 );
 

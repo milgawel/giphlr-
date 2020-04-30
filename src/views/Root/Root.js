@@ -1,19 +1,8 @@
 import React, { Component } from "react";
-import SearchPanel from "components/SearchPanel";
 import MainTemplate from "templates/MainTemplate";
 import Navigation from "components/Navigation";
-import CardsView from "components/CardsView";
+import CardsView from "views/CardsView";
 import InfiniteScroll from "react-infinite-scroller";
-import styled from "styled-components";
-
-const Loader = styled.div`
-  position: fixed;
-  width: 600px;
-  height: 200px;
-  bottom: 20px;
-  left: 45%;
-  background-color: purple;
-`;
 
 class Root extends Component {
   state = {
@@ -29,17 +18,22 @@ class Root extends Component {
     this.setState({
       searched: true,
       input,
+      offset: 0,
+      hasMore: true,
     });
     fetch(
       `https://api.giphy.com/v1/gifs/search?api_key=OFZBS28HtstfZcpRMxV1XunRnqoGMT0V&q=${input}&limit=50&offset=0&rating=G&lang=en`
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
-        console.log(data.data);
-        this.setState({
-          cards: data.data,
-        });
+        if (data.meta.status === 200) {
+          this.setState({
+            cards: data.data,
+          });
+          document.title = `Giphlr - ${input}`;
+        } else {
+          console.log(`wrong response status [${data.meta.status}]`);
+        }
       })
       .catch((err) => console.log(err));
   };
@@ -52,6 +46,12 @@ class Root extends Component {
     )
       .then((response) => response.json())
       .then((data) => {
+        if (data.data.length === 0) {
+          this.setState({
+            hasMore: false,
+          });
+        }
+
         const newArray = this.state.cards.concat(data.data);
         const newOffset = this.state.offset + 50;
         this.setState({
@@ -65,11 +65,11 @@ class Root extends Component {
   render() {
     return (
       <MainTemplate>
-        <Navigation />
-        <SearchPanel
+        <Navigation
           handleInputSubmit={this.handleInput}
           searched={this.state.searched}
         />
+
         {this.state.searched ? (
           <InfiniteScroll
             pageStart={0}
