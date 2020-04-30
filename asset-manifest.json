@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/giphlr/static/css/main.8afee898.chunk.css",
-    "main.js": "/giphlr/static/js/main.2496cb18.chunk.js",
-    "main.js.map": "/giphlr/static/js/main.2496cb18.chunk.js.map",
+    "main.css": "/giphlr/static/css/main.dc2d03b6.chunk.css",
+    "main.js": "/giphlr/static/js/main.b05d6199.chunk.js",
+    "main.js.map": "/giphlr/static/js/main.b05d6199.chunk.js.map",
     "runtime-main.js": "/giphlr/static/js/runtime-main.667d6486.js",
     "runtime-main.js.map": "/giphlr/static/js/runtime-main.667d6486.js.map",
     "static/js/2.5bfb5b0b.chunk.js": "/giphlr/static/js/2.5bfb5b0b.chunk.js",
     "static/js/2.5bfb5b0b.chunk.js.map": "/giphlr/static/js/2.5bfb5b0b.chunk.js.map",
     "index.html": "/giphlr/index.html",
-    "precache-manifest.69c85bd583d5d9238a589128bdee1dae.js": "/giphlr/precache-manifest.69c85bd583d5d9238a589128bdee1dae.js",
+    "precache-manifest.b3d242bca847492a4614dbd227155571.js": "/giphlr/precache-manifest.b3d242bca847492a4614dbd227155571.js",
     "service-worker.js": "/giphlr/service-worker.js",
-    "static/css/main.8afee898.chunk.css.map": "/giphlr/static/css/main.8afee898.chunk.css.map",
+    "static/css/main.dc2d03b6.chunk.css.map": "/giphlr/static/css/main.dc2d03b6.chunk.css.map",
     "static/js/2.5bfb5b0b.chunk.js.LICENSE.txt": "/giphlr/static/js/2.5bfb5b0b.chunk.js.LICENSE.txt",
     "static/media/giphy_main.jpg": "/giphlr/static/media/giphy_main.1b99dd96.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.667d6486.js",
     "static/js/2.5bfb5b0b.chunk.js",
-    "static/css/main.8afee898.chunk.css",
-    "static/js/main.2496cb18.chunk.js"
+    "static/css/main.dc2d03b6.chunk.css",
+    "static/js/main.b05d6199.chunk.js"
   ]
 }
