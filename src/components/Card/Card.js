@@ -2,12 +2,19 @@ import React from "react";
 import styled from "styled-components";
 import LazyLoad from "react-lazyload";
 
+const choseColor = () => {
+  const colorArray = ["#29d1ff", "#e791ff", "#bc42f5", "#e0f542", "#f58142"];
+  let position = Math.floor(Math.random() * 5);
+  return colorArray[position];
+};
+
 const StyledCard = styled.figure`
   margin-bottom: 30px;
   box-shadow: -2px -2px 5px 1px black;
   padding: 0;
   position: relative;
   overflow: hidden;
+  background-color: ${choseColor()};
 `;
 
 const StyledHeader = styled.figcaption`
@@ -32,14 +39,8 @@ const StyledImg = styled.img`
 `;
 
 const StyledLink = styled.a`
-  background-color: cyan;
+  /* background-color: cyan; */
 `;
-
-const choseColor = () => {
-  const colorArray = ["#29d1ff", "#e791ff", "#bc42f5", "#e0f542", "#f58142"];
-  let position = Math.floor(Math.random() * colorArray.length);
-  return colorArray[position];
-};
 
 const Placeholder = styled.div`
   width: 100%;

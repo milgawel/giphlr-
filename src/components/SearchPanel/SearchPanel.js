@@ -7,7 +7,8 @@ const PanelWrapper = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 220px;
+  width: 240px;
+  height: 90px;
   display: flex;
   transition: all 0.4s ease;
   flex-direction: column;
@@ -15,7 +16,7 @@ const PanelWrapper = styled.div`
   animation-delay: 0.3s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
-  z-index: 999;
+  z-index: 99;
   @keyframes animateMovement {
     0% {
       top: 50%;
@@ -25,7 +26,6 @@ const PanelWrapper = styled.div`
     100% {
       top: 50px;
       left: 185px;
-      position: fixed;
     }
   }
 `;
