@@ -33,7 +33,6 @@ const ContentSwitchContainer = styled.div`
   width: 200px;
   background-color: red;
   margin-bottom: 20px;
-  margin-left: -10px;
   display: flex;
   position: relative;
   z-index: 9999;

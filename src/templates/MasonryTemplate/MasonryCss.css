@@ -7,7 +7,7 @@
 }
 @media (max-width: 420px) {
   .my-masonry-grid {
-    margin-left: -40px; /* gutter size offset */
+    margin-left: -20px; /* gutter size offset */
   }
 }
 .my-masonry-grid_column {
