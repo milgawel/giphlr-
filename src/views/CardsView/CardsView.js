@@ -96,6 +96,7 @@ class CardsView extends React.Component {
               key={item.id}
               title={item.title}
               imgUrl={item.images.fixed_width.webp}
+              itemHeight={item.images.fixed_width.height}
 
               // imgUrl={item.images.original.webp}
               // imgUrl={item.images.original.mp4}
@@ -109,28 +110,3 @@ class CardsView extends React.Component {
 }
 
 export default CardsView;
-
-// const CardsView = ({ children, photosType }) => (
-//   <Wrapper>
-//     <ContentSwitch>
-//       <SwitchButton>GIFs</SwitchButton>
-//       <SwitchButton>Stickers</SwitchButton>
-//     </ContentSwitch>
-//     <MasonryTemplate>
-//       {children.map((item) => (
-//         <Card
-//           id={item.id}
-//           key={item.id}
-//           title={item.title}
-//           imgUrl={item.images.fixed_width.webp}
-//           photosType={photosType}
-//           // imgUrl={item.images.original.webp}
-//           // imgUrl={item.images.original.mp4}
-//           // imgUrl={item.images.preview_webp.url}
-//         />
-//       ))}
-//     </MasonryTemplate>
-//   </Wrapper>
-// );
-
-// export default CardsView;

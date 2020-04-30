@@ -15,7 +15,6 @@ class Root extends Component {
   };
 
   handlePhotosType = (e) => {
-    console.log(`[button handle function]`);
     if (this.state.photosType === "gifs") {
       this.setState(
         {
@@ -31,9 +30,6 @@ class Root extends Component {
         () => this.handleInput(e, this.state.input)
       );
     }
-    // console.log(`[photosType przed handleinput] ${this.state.photosType}`);
-    // this.handleInput(e, this.state.input);
-    // console.log(`[photosType po handleinput] ${this.state.photosType}`);
   };
 
   handleInput = (e, input = this.state.input) => {

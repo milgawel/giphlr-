@@ -1,9 +1,0 @@
-OFZBS28HtstfZcpRMxV1XunRnqoGMT0V
-
-
-osiadaj¹c ju¿ API key, zaimplementuj na stronie wyszukiwarkê, która po wpisaniu tekstu wyœle ¿¹danie do serwisu Giphy I wyœwietli zwrócone dane w formie obrazkowej.
-Request URL: https://api.giphy.com/v1/gifs/search? api_key={TWÓJ_API_KEY}&q=programming&limit=10&offset=0&rating=G&lan g=en Przyk³adowy wynik:
-
-Request URL: 
-https://api.giphy.com/v1/gifs/search?api_key=OFZBS28HtstfZcpRMxV1XunRnqoGMT0V&q=programming&limit=10&offset=0&rating=G&lang=en
- Przyk³adowy wynik:

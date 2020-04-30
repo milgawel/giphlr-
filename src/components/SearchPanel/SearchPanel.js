@@ -51,13 +51,27 @@ const StyledButton = styled.input`
 class SearchPanel extends Component {
   state = {
     input: "",
+    autocomplete: [],
   };
 
   handleInputChange = (e) => {
     const newInput = e.target.value;
+    console.log(`[${newInput}]`);
     this.setState({
       input: newInput,
     });
+
+    // fetch(
+    //   `https://api.giphy.com/v1/gifs/search/tags?api_key=OFZBS28HtstfZcpRMxV1XunRnqoGMT0V&q=${this.state.input}`
+    // )
+    //   .then((response) => response.json())
+    //   .then((data) =>
+    //     this.setState({
+    //       autocomplete: data.data,
+    //     })
+    //   )
+    //   .catch((err) => console.log(err));
+    // console.log(`[${this.state.autocomplete}]`);
   };
 
   render() {
@@ -81,6 +95,7 @@ class SearchPanel extends Component {
             inputValue={this.state.input}
             active={searched}
           />
+
           <StyledButton
             type="submit"
             value="Wyszukaj zdjęcia"
