@@ -15,10 +15,11 @@ const StyledInput = styled.input`
   padding: 0 0 0 16%;
   font-size: 16px;
   border: none;
-  box-shadow: 0px 0px 10px 3px
+  box-shadow: 0px 0px 5px 3px
     ${({ isActive }) => (isActive ? 'none' : '#d562f5')};
   background-color: #29d1ff;
   transition: box-shadow 5s ease;
+  transition: background-color 0.4s ease;
   outline: none;
   &:hover {
     background-color: #82e4ff;

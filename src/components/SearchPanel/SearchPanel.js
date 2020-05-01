@@ -43,7 +43,7 @@ const StyledButton = styled.input`
   border: none;
   background-color: #d562f5;
   font-size: 16px;
-  box-shadow: 0px 0px 10px 3px #29d1ff;
+  box-shadow: 0px 0px 5px 3px #29d1ff;
   cursor: pointer;
   visibility: ${({ active }) => (active ? 'hidden' : 'visible')};
   opacity: ${({ active }) => (active ? 0 : 1)};
