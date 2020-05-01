@@ -1,40 +1,44 @@
-import React, { Component } from "react";
-import MainTemplate from "templates/MainTemplate";
-import Navigation from "components/Navigation";
-import CardsView from "views/CardsView";
-import InfiniteScroll from "react-infinite-scroller";
+import React, { Component } from 'react';
+import MainTemplate from 'templates/MainTemplate';
+import Navigation from 'components/Navigation';
+import CardsView from 'views/CardsView';
+import InfiniteScroll from 'react-infinite-scroller';
 
 class Root extends Component {
   state = {
-    input: "",
+    input: '',
     searched: false,
     offset: 0,
     cards: [],
     hasMore: true,
-    photosType: "gifs",
+    photosType: 'gifs',
   };
 
   handlePhotosType = (e) => {
-    if (this.state.photosType === "gifs") {
+    const { photosType, input } = this.state;
+    if (photosType === 'gifs') {
       this.setState(
         {
-          photosType: "stickers",
+          photosType: 'stickers',
         },
-        () => this.handleInput(e, this.state.input)
+        () => this.handleInput(e, input),
       );
     } else {
       this.setState(
         {
-          photosType: "gifs",
+          photosType: 'gifs',
         },
-        () => this.handleInput(e, this.state.input)
+        () => this.handleInput(e, input),
       );
     }
   };
 
   handleInput = (e, input = this.state.input) => {
+    const { photosType } = this.state;
     e.preventDefault();
-    if (input.length === 0) input = "trending";
+
+    if (input.length === 0) input = 'trending';
+
     this.setState({
       searched: true,
       input,
@@ -42,7 +46,7 @@ class Root extends Component {
       hasMore: true,
     });
     fetch(
-      `https://api.giphy.com/v1/${this.state.photosType}/search?api_key=OFZBS28HtstfZcpRMxV1XunRnqoGMT0V&q=${input}&limit=50&offset=0&rating=G&lang=en`
+      `https://api.giphy.com/v1/${photosType}/search?api_key=OFZBS28HtstfZcpRMxV1XunRnqoGMT0V&q=${input}&limit=50&offset=0&rating=G&lang=en`,
     )
       .then((response) => response.json())
       .then((data) => {
@@ -59,12 +63,11 @@ class Root extends Component {
   };
 
   renderMoreContent = (input) => {
+    const { photosType, offset, cards } = this.state;
     fetch(
-      `https://api.giphy.com/v1/${
-        this.state.photosType
-      }/search?api_key=OFZBS28HtstfZcpRMxV1XunRnqoGMT0V&q=${input}&limit=50&offset=${
-        this.state.offset + 50
-      }&rating=G&lang=en`
+      `https://api.giphy.com/v1/${photosType}/search?api_key=OFZBS28HtstfZcpRMxV1XunRnqoGMT0V&q=${input}&limit=50&offset=${
+        offset + 50
+      }&rating=G&lang=en`,
     )
       .then((response) => response.json())
       .then((data) => {
@@ -74,8 +77,8 @@ class Root extends Component {
           });
         }
 
-        const newArray = this.state.cards.concat(data.data);
-        const newOffset = this.state.offset + 50;
+        const newArray = cards.concat(data.data);
+        const newOffset = offset + 50;
         this.setState({
           cards: newArray,
           offset: newOffset,
@@ -85,27 +88,25 @@ class Root extends Component {
   };
 
   render() {
+    const { searched, input, hasMore, cards } = this.state;
     return (
       <MainTemplate>
-        <Navigation
-          handleInputSubmit={this.handleInput}
-          searched={this.state.searched}
-        />
+        <Navigation handleInputSubmit={this.handleInput} searched={searched} />
 
-        {this.state.searched ? (
+        {searched ? (
           <InfiniteScroll
             pageStart={0}
             loadMore={() => {
               if (window.pageYOffset > 2000) {
-                this.renderMoreContent(this.state.input);
+                this.renderMoreContent(input);
               }
             }}
-            hasMore={this.state.hasMore}
+            hasMore={hasMore}
             loader={null}
           >
-            {this.state.searched ? (
+            {searched ? (
               <CardsView photosTypeHandlingFunction={this.handlePhotosType}>
-                {this.state.cards}
+                {cards}
               </CardsView>
             ) : null}
           </InfiniteScroll>

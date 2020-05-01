@@ -1,7 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import Card from "components/Card";
-import MasonryTemplate from "templates/MasonryTemplate";
+import React from 'react';
+import styled from 'styled-components';
+import Card from 'components/Card';
+import MasonryTemplate from 'templates/MasonryTemplate';
+import PropTypes from 'prop-types';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -41,7 +42,7 @@ const ContentSwitchContainer = styled.div`
 const SwitchButton = styled.button`
   width: 50%;
   height: 30px;
-  background-color: ${({ active }) => (active ? "cyan" : "darkgrey")};
+  background-color: ${({ active }) => (active ? 'cyan' : 'darkgrey')};
   cursor: pointer;
   border: none;
   transition: background-color 0.4s ease;
@@ -53,22 +54,22 @@ class CardsView extends React.Component {
   };
 
   handleButtonChange = () => {
-    const NewGifsContent = !this.state.gifsContent;
-    this.setState({
-      gifsContent: NewGifsContent,
-    });
+    this.setState((prevState) => ({
+      gifsContent: !prevState.gifsContent,
+    }));
   };
 
   render() {
     const { children, photosTypeHandlingFunction } = this.props;
+    const { gifsContent } = this.state;
 
     return (
       <Wrapper>
         <ContentSwitchContainer>
           <SwitchButton
-            active={this.state.gifsContent}
+            active={gifsContent}
             onClick={(e) => {
-              if (!this.state.gifsContent) {
+              if (!gifsContent) {
                 this.handleButtonChange();
                 photosTypeHandlingFunction(e);
               }
@@ -77,9 +78,9 @@ class CardsView extends React.Component {
             GIFs
           </SwitchButton>
           <SwitchButton
-            active={!this.state.gifsContent}
+            active={!gifsContent}
             onClick={(e) => {
-              if (this.state.gifsContent) {
+              if (gifsContent) {
                 this.handleButtonChange();
                 photosTypeHandlingFunction(e);
               }
@@ -107,5 +108,10 @@ class CardsView extends React.Component {
     );
   }
 }
+
+CardsView.propTypes = {
+  children: PropTypes.arrayOf(Object).isRequired,
+  photosTypeHandlingFunction: PropTypes.func.isRequired,
+};
 
 export default CardsView;

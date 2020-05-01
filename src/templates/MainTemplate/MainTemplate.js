@@ -1,14 +1,15 @@
-import React from "react";
-import styled from "styled-components";
-import GlobalStyle from "theme/GlobalStyle";
-import wallpaper from "assets/giphy_main.jpg";
+import React from 'react';
+import styled from 'styled-components';
+import GlobalStyle from 'theme/GlobalStyle';
+import wallpaper from 'assets/giphy_main.jpg';
+import PropTypes from 'prop-types';
 
 const Wrapper = styled.div`
   width: 100vw;
   min-height: 100vh;
 
   &:after {
-    content: "";
+    content: '';
     background: url(${wallpaper});
     background-repeat: no-repeat;
     background-size: cover;
@@ -29,5 +30,9 @@ const MainTemplate = ({ children }) => (
     {children}
   </Wrapper>
 );
+
+MainTemplate.propTypes = {
+  children: PropTypes.arrayOf(Object).isRequired,
+};
 
 export default MainTemplate;

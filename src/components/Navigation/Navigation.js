@@ -1,7 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import logo from "assets/giphy_logoIcon.png";
-import SearchPanel from "components/SearchPanel";
+import React from 'react';
+import styled from 'styled-components';
+import logo from 'assets/giphy_logoIcon.png';
+import SearchPanel from 'components/SearchPanel';
+import PropTypes from 'prop-types';
 
 const NavWrapper = styled.div`
   width: 100vw;
@@ -27,3 +28,8 @@ const Navigation = ({ handleInputSubmit, searched }) => (
 );
 
 export default Navigation;
+
+Navigation.propTypes = {
+  handleInputSubmit: PropTypes.func.isRequired,
+  searched: PropTypes.bool.isRequired,
+};

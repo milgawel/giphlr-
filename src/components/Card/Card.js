@@ -1,10 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import LazyLoad from "react-lazyload";
+import React from 'react';
+import styled from 'styled-components';
+import LazyLoad from 'react-lazyload';
+import PropTypes from 'prop-types';
 
 const choseColor = () => {
-  const colorArray = ["#29d1ff", "#e791ff", "#bc42f5", "#e0f542", "#f58142"];
-  let position = Math.floor(Math.random() * 5);
+  const colorArray = ['#29d1ff', '#e791ff', '#bc42f5', '#e0f542', '#f58142'];
+  const position = Math.floor(Math.random() * 5);
   return colorArray[position];
 };
 
@@ -23,7 +24,7 @@ const StyledHeader = styled.figcaption`
   padding: 5px;
   position: absolute;
   transform: ${({ active }) =>
-    !active ? "translate(0, -100%)" : "translate(0, 0)"};
+    !active ? 'translate(0, -100%)' : 'translate(0, 0)'};
   transition: 0.4s ease;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
@@ -35,7 +36,7 @@ const StyledHeader = styled.figcaption`
 const StyledImg = styled.img`
   width: 100%;
   height: 100%;
-  display: ${({ display }) => (display ? "block" : "none")};
+  display: ${({ displayed }) => (displayed ? 'block' : 'none')};
 `;
 
 const StyledLink = styled.a`
@@ -44,7 +45,7 @@ const StyledLink = styled.a`
 
 const Placeholder = styled.div`
   width: 100%;
-  height: ${({ height }) => (height ? `${height}px` : "150px")};
+  height: ${({ height }) => (height ? `${height}px` : '150px')};
   background-color: ${choseColor()};
 `;
 
@@ -70,6 +71,7 @@ class Card extends React.Component {
 
   render() {
     const { id, title, imgUrl, itemHeight } = this.props;
+    const { isHovering, ready } = this.state;
 
     return (
       <LazyLoad once height={200} offset={400}>
@@ -78,15 +80,15 @@ class Card extends React.Component {
           onMouseEnter={this.handleMouseHover}
           onMouseLeave={this.handleMouseHover}
         >
-          {<StyledHeader active={this.state.isHovering}>{title}</StyledHeader>}
+          <StyledHeader active={isHovering}>{title}</StyledHeader>
 
           <StyledLink href={imgUrl} target="_blank">
-            {this.state.ready ? null : <Placeholder itemHeight={itemHeight} />}
+            {ready ? null : <Placeholder itemHeight={itemHeight} />}
             <StyledImg
               src={imgUrl}
               alt={title}
               onLoad={() => this.setState({ ready: true })}
-              display={this.state.ready}
+              displayed={ready}
             />
           </StyledLink>
         </StyledCard>
@@ -96,3 +98,10 @@ class Card extends React.Component {
 }
 
 export default Card;
+
+Card.propTypes = {
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  imgUrl: PropTypes.string.isRequired,
+  itemHeight: PropTypes.string.isRequired,
+};

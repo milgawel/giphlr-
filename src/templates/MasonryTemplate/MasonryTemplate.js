@@ -1,6 +1,7 @@
-import React from "react";
-import Masonry from "react-masonry-css";
-import "./MasonryCss.css";
+import React from 'react';
+import Masonry from 'react-masonry-css';
+import './MasonryCss.css';
+import PropTypes from 'prop-types';
 
 const breakpointColumnsObj = {
   default: 6,
@@ -20,5 +21,9 @@ const MasonryLayout = ({ children }) => (
     {children}
   </Masonry>
 );
+
+MasonryLayout.propTypes = {
+  children: PropTypes.arrayOf(Object).isRequired,
+};
 
 export default MasonryLayout;

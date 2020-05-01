@@ -1,2 +1,3 @@
-import MasonryTemplate from "./MasonryTemplate";
+import MasonryTemplate from './MasonryTemplate';
+
 export default MasonryTemplate;

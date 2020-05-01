@@ -1,6 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import searchIcon from "assets/search_icon.png";
+import React from 'react';
+import styled from 'styled-components';
+import searchIcon from 'assets/search_icon.png';
+import PropTypes from 'prop-types';
 
 const StyledInput = styled.input`
   height: 40px;
@@ -14,7 +15,7 @@ const StyledInput = styled.input`
   padding: 0 0 0 20%;
   border: none;
   box-shadow: 0px 0px 10px 3px
-    ${({ isActive }) => (isActive ? "none" : "#d562f5")};
+    ${({ isActive }) => (isActive ? 'none' : '#d562f5')};
   background-color: #29d1ff;
   transition: box-shadow 5s ease;
   outline: none;
@@ -32,5 +33,11 @@ const Input = ({ handleChangeFunction, inputValue, active }) => (
     isActive={active}
   />
 );
+
+Input.propTypes = {
+  handleChangeFunction: PropTypes.func.isRequired,
+  inputValue: PropTypes.string.isRequired,
+  active: PropTypes.bool.isRequired,
+};
 
 export default Input;

@@ -1,2 +1,3 @@
-import CardsView from "./CardsView";
+import CardsView from './CardsView';
+
 export default CardsView;

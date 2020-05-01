@@ -1,6 +1,7 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import Input from "components/Input";
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import Input from 'components/Input';
+import PropTypes from 'prop-types';
 
 const PanelWrapper = styled.div`
   position: fixed;
@@ -12,7 +13,7 @@ const PanelWrapper = styled.div`
   display: flex;
   transition: all 0.4s ease;
   flex-direction: column;
-  animation: ${({ active }) => (active ? "animateMovement" : "null")} 0.7s;
+  animation: ${({ active }) => (active ? 'animateMovement' : 'null')} 0.7s;
   animation-delay: 0.3s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
@@ -38,9 +39,9 @@ const StyledButton = styled.input`
   background-color: #d562f5;
   box-shadow: 0px 0px 10px 3px #29d1ff;
   cursor: pointer;
-  visibility: ${({ active }) => (active ? "hidden" : "visible")};
+  visibility: ${({ active }) => (active ? 'hidden' : 'visible')};
   opacity: ${({ active }) => (active ? 0 : 1)};
-  pointer-events: ${({ active }) => (active ? "none" : "auto")};
+  pointer-events: ${({ active }) => (active ? 'none' : 'auto')};
   transition: all 0.4s ease;
 
   &:hover {
@@ -50,8 +51,7 @@ const StyledButton = styled.input`
 
 class SearchPanel extends Component {
   state = {
-    input: "",
-    autocomplete: [],
+    input: '',
   };
 
   handleInputChange = (e) => {
@@ -60,39 +60,28 @@ class SearchPanel extends Component {
     this.setState({
       input: newInput,
     });
-
-    // fetch(
-    //   `https://api.giphy.com/v1/gifs/search/tags?api_key=OFZBS28HtstfZcpRMxV1XunRnqoGMT0V&q=${this.state.input}`
-    // )
-    //   .then((response) => response.json())
-    //   .then((data) =>
-    //     this.setState({
-    //       autocomplete: data.data,
-    //     })
-    //   )
-    //   .catch((err) => console.log(err));
-    // console.log(`[${this.state.autocomplete}]`);
   };
 
   render() {
     const { handleInputSubmit, searched } = this.props;
+    const { input } = this.state;
     return (
       <PanelWrapper active={searched}>
         <form
           onSubmit={(e) => {
-            handleInputSubmit(e, this.state.input);
-            this.setState({ input: "" });
+            handleInputSubmit(e, input);
+            this.setState({ input: '' });
           }}
           onKeyPress={(e) => {
-            if (e.key === "Enter") {
-              handleInputSubmit(e, this.state.input);
-              this.setState({ input: "" });
+            if (e.key === 'Enter') {
+              handleInputSubmit(e, input);
+              this.setState({ input: '' });
             }
           }}
         >
           <Input
             handleChangeFunction={this.handleInputChange}
-            inputValue={this.state.input}
+            inputValue={input}
             active={searched}
           />
 
@@ -106,5 +95,10 @@ class SearchPanel extends Component {
     );
   }
 }
+
+SearchPanel.propTypes = {
+  handleInputSubmit: PropTypes.func.isRequired,
+  searched: PropTypes.bool.isRequired,
+};
 
 export default SearchPanel;
