@@ -4,6 +4,7 @@
 - [Technologies](#technologies)
 - [Setup](#setup)
 - [Features](#features)
+- [Screenshot](#screenshot)
 
 ## General info
 
@@ -39,3 +40,7 @@ $ npm start
 - Select "Stickers" to change view
 - Scroll down to get more gifs and stickers
 - Click on GIF/Sticker to move to the original page
+
+## Screenshot
+
+![Website screenshot](./src/assets/websitepic.png)
