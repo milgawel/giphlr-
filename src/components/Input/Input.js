@@ -11,8 +11,8 @@ const StyledInput = styled.input`
   background-image: url(${searchIcon});
   background-repeat: no-repeat;
   background-size: 8%;
-  background-position: 5% 50%;
-  padding: 0 0 0 16%;
+  background-position: 4% 50%;
+  padding: 0 0 0 15%;
   font-size: 16px;
   border: none;
   box-shadow: 0px 0px 5px 3px
