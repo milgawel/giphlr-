@@ -8,8 +8,9 @@ const PanelWrapper = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 240px;
-  height: 90px;
+  width: 250px;
+  height: 100px;
+  padding: 5px;
   display: flex;
   transition: all 0.4s ease;
   flex-direction: column;
@@ -28,7 +29,7 @@ const PanelWrapper = styled.div`
     }
 
     100% {
-      top: 27.5px;
+      top: 23px;
       left: 185px;
       height: 45px;
     }
@@ -41,6 +42,7 @@ const StyledButton = styled.input`
   border-radius: 5px;
   border: none;
   background-color: #d562f5;
+  font-size: 16px;
   box-shadow: 0px 0px 10px 3px #29d1ff;
   cursor: pointer;
   visibility: ${({ active }) => (active ? 'hidden' : 'visible')};
@@ -90,7 +92,7 @@ class SearchPanel extends Component {
 
           <StyledButton
             type="submit"
-            value="Wyszukaj zdjęcia"
+            value="Search for images"
             active={searched}
           />
         </form>

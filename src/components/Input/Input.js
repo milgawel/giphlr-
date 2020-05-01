@@ -12,7 +12,8 @@ const StyledInput = styled.input`
   background-repeat: no-repeat;
   background-size: 8%;
   background-position: 5% 50%;
-  padding: 0 0 0 20%;
+  padding: 0 0 0 16%;
+  font-size: 16px;
   border: none;
   box-shadow: 0px 0px 10px 3px
     ${({ isActive }) => (isActive ? 'none' : '#d562f5')};
@@ -29,7 +30,7 @@ const Input = ({ handleChangeFunction, inputValue, active }) => (
     type="text"
     onChange={handleChangeFunction}
     value={inputValue}
-    placeholder="Zacznijmy kolejną podróż"
+    placeholder="Let's start a new adventure!"
     isActive={active}
   />
 );
