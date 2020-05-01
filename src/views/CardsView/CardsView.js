@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   padding-right: 30px;
   padding-top: 65px;
   animation: display 1.5s;
-  position: relative;
+  /* position: relative; */
   @media (max-width: 420px) {
     padding-left: 20px;
     padding-right: 20px;
@@ -34,9 +34,12 @@ const ContentSwitchContainer = styled.div`
   width: 200px;
   background-color: red;
   margin-bottom: 20px;
+  margin-left: -10px;
   display: flex;
-  position: relative;
-  z-index: 9999;
+  /* position: relative; */
+  @media (max-width: 420px) {
+    margin-left: 0px;
+  }
 `;
 
 const SwitchButton = styled.button`

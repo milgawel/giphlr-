@@ -18,15 +18,19 @@ const PanelWrapper = styled.div`
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   z-index: 99;
+  overflow: hidden;
+
   @keyframes animateMovement {
     0% {
       top: 50%;
       left: 50%;
+      height: 90px;
     }
 
     100% {
-      top: 50px;
+      top: 27.5px;
       left: 185px;
+      height: 45px;
     }
   }
 `;
