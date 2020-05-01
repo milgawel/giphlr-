@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/giphlr/static/css/main.5a0fbaf0.chunk.css",
-    "main.js": "/giphlr/static/js/main.f27d782d.chunk.js",
-    "main.js.map": "/giphlr/static/js/main.f27d782d.chunk.js.map",
+    "main.js": "/giphlr/static/js/main.e8755249.chunk.js",
+    "main.js.map": "/giphlr/static/js/main.e8755249.chunk.js.map",
     "runtime-main.js": "/giphlr/static/js/runtime-main.667d6486.js",
     "runtime-main.js.map": "/giphlr/static/js/runtime-main.667d6486.js.map",
     "static/js/2.5bfb5b0b.chunk.js": "/giphlr/static/js/2.5bfb5b0b.chunk.js",
     "static/js/2.5bfb5b0b.chunk.js.map": "/giphlr/static/js/2.5bfb5b0b.chunk.js.map",
     "index.html": "/giphlr/index.html",
-    "precache-manifest.d555def6ee087ae5c6f62103242834d1.js": "/giphlr/precache-manifest.d555def6ee087ae5c6f62103242834d1.js",
+    "precache-manifest.bcddd62a1faf222002b3c028e7ddc236.js": "/giphlr/precache-manifest.bcddd62a1faf222002b3c028e7ddc236.js",
     "service-worker.js": "/giphlr/service-worker.js",
     "static/css/main.5a0fbaf0.chunk.css.map": "/giphlr/static/css/main.5a0fbaf0.chunk.css.map",
     "static/js/2.5bfb5b0b.chunk.js.LICENSE.txt": "/giphlr/static/js/2.5bfb5b0b.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.667d6486.js",
     "static/js/2.5bfb5b0b.chunk.js",
     "static/css/main.5a0fbaf0.chunk.css",
-    "static/js/main.f27d782d.chunk.js"
+    "static/js/main.e8755249.chunk.js"
   ]
 }
