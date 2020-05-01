@@ -20,6 +20,9 @@ Project is created with:
 - react-masonry-css: 1.0.14
 - styled-components: 5.1.0
 
+Api used for project:
+GIPHY API
+
 ## Setup
 
 To run this project, install it locally using npm:
@@ -35,3 +38,4 @@ $ npm start
 - Type in a phrase and submit to get funny pictures
 - Select "Stickers" to change view
 - Scroll down to get more gifs and stickers
+- Click on GIF/Sticker to move to the original page
