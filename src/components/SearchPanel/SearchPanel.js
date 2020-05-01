@@ -56,7 +56,6 @@ class SearchPanel extends Component {
 
   handleInputChange = (e) => {
     const newInput = e.target.value;
-    console.log(`[${newInput}]`);
     this.setState({
       input: newInput,
     });
